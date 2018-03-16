@@ -79,7 +79,8 @@ class EthTesterClient(object):
 
         self.snapshots = []
 
-        self.reset_evm()
+        # seems to be incompatible with pyethereum 2.x
+        #self.reset_evm()
 
         self.evm.block.config['HOMESTEAD_FORK_BLKNUM'] = self.homestead_block_number  # noqa
         self.evm.block.config['DAO_FORK_BLKNUM'] = self.dao_fork_block_number
