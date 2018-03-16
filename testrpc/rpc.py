@@ -8,7 +8,12 @@ try:
 except ImportError:
     from sha3 import sha3_256 as keccak_256
 
-from ethereum import blocks
+try:
+    from ethereum import blocks
+except ImportError:
+    # "Time travel" impossible because using newer version of pyethereum.
+    pass
+
 from ethereum.tester import (
     languages,
 )
