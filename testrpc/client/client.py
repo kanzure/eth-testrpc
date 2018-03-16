@@ -79,8 +79,7 @@ class EthTesterClient(object):
 
         self.snapshots = []
 
-        # seems to be incompatible with pyethereum 2.x
-        #self.reset_evm()
+        self.reset_evm()
 
         #self.evm.block.config['HOMESTEAD_FORK_BLKNUM'] = self.homestead_block_number  # noqa
         #self.evm.block.config['DAO_FORK_BLKNUM'] = self.dao_fork_block_number
@@ -99,7 +98,7 @@ class EthTesterClient(object):
         if snapshot_idx is not None:
             self.revert_evm(snapshot_idx)
         else:
-            self.evm = t.state()
+            self.evm = t.Chain()
             self.evm.block.gas_limit = DEFAULT_GAS_LIMIT
 
     @with_lock
