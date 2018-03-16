@@ -1,6 +1,6 @@
 import rlp
 
-from ethereum import tester
+from ethereum.tools import tester
 from ethereum.transactions import Transaction
 
 from testrpc.client.utils import encode_data

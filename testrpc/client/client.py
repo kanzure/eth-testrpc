@@ -14,7 +14,7 @@ from testrpc.compat import threading
 import rlp
 
 from ethereum import transactions
-from ethereum import tester as t
+from ethereum.tools import tester as t
 from ethereum import config
 from ethereum.utils import (
     privtoaddr,

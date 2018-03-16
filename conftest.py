@@ -64,7 +64,7 @@ def get_open_port():
 
 @pytest.fixture(scope="session")
 def accounts():
-    from ethereum import tester
+    from ethereum.tools import tester
     return [normalize_address(acct) for acct in tester.accounts]
     #  return [b"0x" + encode_hex(acct) for acct in tester.accounts]
 
