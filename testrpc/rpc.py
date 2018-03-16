@@ -14,9 +14,7 @@ except ImportError:
     # "Time travel" impossible because using newer version of pyethereum.
     pass
 
-from ethereum.tester import (
-    languages,
-)
+from ethereum.tools.tester import languages
 
 from .client import EthTesterClient
 from .client.utils import (
