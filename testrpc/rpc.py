@@ -50,10 +50,10 @@ class RPCMethods(object):
             'net_version': 1,
             'net_listening': False,
             'net_peerCount': 0,
-            'homestead_block_number': self.client.evm.block.config['HOMESTEAD_FORK_BLKNUM'],
-            'dao_fork_block_number': self.client.evm.block.config['DAO_FORK_BLKNUM'],
-            'anti_dos_fork_block_number': self.client.evm.block.config['ANTI_DOS_FORK_BLKNUM'],
-            'clearing_fork_block_number': self.client.evm.block.config['CLEARING_FORK_BLKNUM'],
+            #'homestead_block_number': self.client.evm.block.config['HOMESTEAD_FORK_BLKNUM'],
+            #'dao_fork_block_number': self.client.evm.block.config['DAO_FORK_BLKNUM'],
+            #'anti_dos_fork_block_number': self.client.evm.block.config['ANTI_DOS_FORK_BLKNUM'],
+            #'clearing_fork_block_number': self.client.evm.block.config['CLEARING_FORK_BLKNUM'],
         }
 
     def rpc_configure(self, key, value):
